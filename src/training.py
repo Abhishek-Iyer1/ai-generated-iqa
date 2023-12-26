@@ -34,25 +34,31 @@ def run_training_pipeline():
     with open('../data/k_fold_splits.pkl', 'rb') as f:
         index_dict: dict = pickle.load(f)
 
-    # Load the model
-    my_resnet = load_model().to(device)
+    num_folds_to_run = 2
+    subset_keys = list(index_dict)[0:num_folds_to_run]
+    subset_dict = dict((k, index_dict[k]) for k in subset_keys)
 
     # Run a for loop for each fold where you use indices split to load train, val, and test for each fold
-    for fold, (train_index, val_index, test_index) in tqdm(index_dict.items()):
+    for fold, (train_index, val_index, test_index) in tqdm(subset_dict.items()):
+        
         print(f"Training {fold}...")
 
+        # Load the model in order to reset its weights
+        my_resnet = load_model().to(device)
+
         # Create Sub Datasets from indices
-        training_dataset = AGIQA(data_df.iloc[index_dict[fold][train_index]])
-        val_dataset = AGIQA(data_df.iloc[index_dict[fold][val_index]])
-        # test_dataset = AGIQA(data_df.iloc[index_dict[fold][test_index]])
+        training_dataset = AGIQA(data_df.iloc[subset_dict[fold][train_index]])
+        val_dataset = AGIQA(data_df.iloc[subset_dict[fold][val_index]])
+        test_dataset = AGIQA(data_df.iloc[subset_dict[fold][test_index]])
 
         # Create DataLoaders to take advantage of batching, multiprocessing, and shuffling
-        training_dataloader = DataLoader(training_dataset, batch_size=32, shuffle=True)
-        val_dataloader = DataLoader(val_dataset, batch_size=32, shuffle=True)
-        # test_dataloader = DataLoader(test_dataset, batch_size=16, shuffle=True)
+        batch_size = 32
+        training_dataloader = DataLoader(training_dataset, batch_size=batch_size, shuffle=True)
+        val_dataloader = DataLoader(val_dataset, batch_size=batch_size, shuffle=True)
+        test_dataloader = DataLoader(test_dataset, batch_size=batch_size, shuffle=True)
 
         # Run a simple training loop where weights are set to 0, both losses updated, weights updated. (Per Epoch)
-        epochs = 3
+        epochs = 5
         loss_fn = nn.MSELoss()
         optimizer = optim.SGD(my_resnet.parameters(), lr=0.001, momentum=0.9)
         my_resnet.train()
@@ -76,7 +82,7 @@ def run_training_pipeline():
 
                 train_epoch_loss += loss.item()
             
-            writer.add_scalar("Loss/train", train_epoch_loss, epoch+1)
+            writer.add_scalar(f"{fold}/Loss/train", train_epoch_loss, epoch+1)
 
             print(f"Train Loss Epoch {epoch+1}: {train_epoch_loss}")
 
@@ -98,12 +104,27 @@ def run_training_pipeline():
                 # srocc = stats.spearmanr(y_pred.detach().cpu(), val_y.detach().cpu())
                 # print(srocc)
 
-            writer.add_scalar("Loss/valid", valid_epoch_loss, epoch+1)
+            writer.add_scalar(f"{fold}/Loss/valid", valid_epoch_loss, epoch+1)
 
             print(f"Valid Loss Epoch {epoch+1}: {valid_epoch_loss}")
 
-    # Save Model and Weights
-    torch.save(my_resnet.state_dict(), 'model/my_resnet.pth')
+            test_epoch_loss = 0
+            srocc = 0
+            for x_test, y_test in tqdm(test_dataloader):
+                x_test: torch.Tensor = x_test.to(device)
+                y_test: torch.Tensor = y_test.reshape([y_test.size()[0],1]).to(device)
+                y_pred = my_resnet.forward(x_test)
+                loss = loss_fn.forward(y_pred, y_test)
+                test_epoch_loss += loss
+                srocc += stats.spearmanr(y_pred.detach().cpu(), y_test.detach().cpu()).statistic
+            
+            writer.add_scalar(f"{fold}/Loss/test", test_epoch_loss, epoch+1)
+            writer.add_scalar(f"{fold}/Acc/srocc", ((srocc * batch_size) / len(test_dataset)), epoch+1)
+
+            print(f"Test Loss: {test_epoch_loss}, SROCC Accuracy Average: {(srocc * batch_size) / len(test_dataset)}")
+
+        # Save Model and Weights
+        torch.save(my_resnet.state_dict(), f'model/my_resnet_{fold}.pth')
 
     # Flush the tensorboard information to save it to disk
     writer.flush()

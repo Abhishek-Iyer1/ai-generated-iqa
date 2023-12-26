@@ -27,16 +27,18 @@ def test():
         index_dict: dict = pickle.load(f)
 
     my_resnet = load_model()
-    my_resnet.load_state_dict(torch.load('model/my_resnet.pth'))
+    my_resnet.load_state_dict(torch.load('model/my_resnet_Fold 1.pth'))
 
     my_resnet.eval().to(device)
     loss_fn = nn.MSELoss()
+    batch_size = 32
     for fold, (train_index, val_index, test_index) in index_dict.items():
 
         print(f"Testing {fold}...")
         test_dataset = AGIQA(data_df.iloc[index_dict[fold][test_index]])
-        test_dataloader = DataLoader(test_dataset, batch_size=16, shuffle=True)
+        test_dataloader = DataLoader(test_dataset, batch_size=batch_size, shuffle=True)
         test_loss = 0
+        srocc = 0
         for x_test, y_test in test_dataloader:
             
             x_test: torch.Tensor = x_test.to(device)
@@ -45,8 +47,9 @@ def test():
             loss = loss_fn.forward(y_pred, y_test)
             test_loss += loss
 
-        srocc = stats.spearmanr(y_pred.detach().cpu(), y_test.detach().cpu())
-        print(srocc, test_loss)
+            srocc += stats.spearmanr(y_pred.detach().cpu(), y_test.detach().cpu()).statistic
+        print((srocc * batch_size) / len(test_dataset))
+        print(srocc, test_loss, batch_size, len(test_dataset))
 
 if __name__ == "__main__":
     test()
