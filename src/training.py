@@ -90,6 +90,7 @@ def run_training_pipeline():
             valid_epoch_loss = 0
             # Set model to eval mode
             my_resnet.eval()
+            val_srocc = 0
 
             for val_x, val_y in tqdm(val_dataloader):
                 val_x = val_x.float().to(device)
@@ -101,12 +102,12 @@ def run_training_pipeline():
 
                 valid_epoch_loss += val_batch_loss
 
-                # srocc = stats.spearmanr(y_pred.detach().cpu(), val_y.detach().cpu())
-                # print(srocc)
+                val_srocc += stats.spearmanr(y_pred.detach().cpu(), val_y.detach().cpu()).statistic
 
             writer.add_scalar(f"{fold}/Loss/valid", valid_epoch_loss, epoch+1)
+            writer.add_scalar(f"{fold}/Acc/val_srocc", ((val_srocc * batch_size) / len(val_dataset)), epoch+1)
 
-            print(f"Valid Loss Epoch {epoch+1}: {valid_epoch_loss}")
+            print(f"Valid Loss Epoch {epoch+1}: {valid_epoch_loss}, Val SROCC Accuracy Average: {(val_srocc * batch_size) / len(val_dataset)}")
 
             test_epoch_loss = 0
             srocc = 0
