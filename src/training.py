@@ -29,10 +29,13 @@ def run_training_pipeline():
     # Load dataframe, prepend image prefixs and generate dataset
     data_df = pd.read_csv(data_path)
     data_df["full_paths"] = data_df["name"].apply(lambda x: os.path.join(image_prefix, x))
+    discard_models_condition = ((data_df["name"].str.startswith("AttnGAN")) | (data_df["name"].str.startswith("glide")))
+
+    filtered_df = data_df[(np.bitwise_not(discard_models_condition))]
     # agiqa = AGIQA(data_df)
 
     # Load split files from K folds or Run if file not present
-    with open('../data/k_fold_splits.pkl', 'rb') as f:
+    with open('../data/alt_k_fold_splits.pkl', 'rb') as f:
         index_dict: dict = pickle.load(f)
 
     num_folds_to_run = 2
@@ -48,9 +51,9 @@ def run_training_pipeline():
         my_resnet = load_model().to(device)
 
         # Create Sub Datasets from indices
-        training_dataset = AGIQA(data_df.iloc[subset_dict[fold][train_index]])
-        val_dataset = AGIQA(data_df.iloc[subset_dict[fold][val_index]])
-        test_dataset = AGIQA(data_df.iloc[subset_dict[fold][test_index]])
+        training_dataset = AGIQA(filtered_df.iloc[subset_dict[fold][train_index]])
+        val_dataset = AGIQA(filtered_df.iloc[subset_dict[fold][val_index]])
+        test_dataset = AGIQA(filtered_df.iloc[subset_dict[fold][test_index]])
 
         # Create DataLoaders to take advantage of batching, multiprocessing, and shuffling
         batch_size = 32
@@ -93,6 +96,8 @@ def run_training_pipeline():
             # Set model to eval mode
             my_resnet.eval()
 
+            val_srocc = 0
+
             for val_x, val_y in tqdm(val_dataloader):
                 val_x = val_x.float().to(device)
                 val_y = val_y.float().to(device)
@@ -103,12 +108,16 @@ def run_training_pipeline():
 
                 valid_epoch_loss += val_batch_loss
 
+                val_srocc += stats.spearmanr(y_pred.detach().cpu(), val_y.detach().cpu()).statistic
+                
                 # srocc = stats.spearmanr(y_pred.detach().cpu(), val_y.detach().cpu())
                 # print(srocc)
 
             writer.add_scalar(f"{fold}/Loss/valid", valid_epoch_loss, epoch+1)
+            writer.add_scalar(f"{fold}/Acc/val_srocc", ((val_srocc * batch_size) / len(val_dataset)), epoch+1)
 
-            print(f"Valid Loss Epoch {epoch+1}: {valid_epoch_loss}")
+
+            print(f"Valid Loss Epoch {epoch+1}: {valid_epoch_loss}, Val SROCC Accuracy Average: {(val_srocc * batch_size) / len(val_dataset)}")
 
             test_epoch_loss = 0
             srocc = 0
@@ -126,7 +135,7 @@ def run_training_pipeline():
             print(f"Test Loss: {test_epoch_loss}, SROCC Accuracy Average: {(srocc * batch_size) / len(test_dataset)}")
 
         # Save Model and Weights
-        torch.save(my_resnet.state_dict(), f'model/my_resnet_{fold}.pth')
+        torch.save(my_resnet.state_dict(), f'model/my_resnet_bad_models_dropped_{fold}.pth')
 
     # Flush the tensorboard information to save it to disk
     writer.flush()
@@ -258,5 +267,5 @@ def run_alternative_split_pipeline():
 
 
 if __name__ == "__main__":
-    # run_training_pipeline()
-    run_alternative_split_pipeline()
+    run_training_pipeline()
+    # run_alternative_split_pipeline()
