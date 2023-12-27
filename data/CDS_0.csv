@@ -1,0 +1,301 @@
+,prompt,split_0,split_1,split_2,split_3,split_4,split_5,split_6,split_7,split_8,split_9
+0,statue of a man,train,train,train,train,val,train,train,train,train,train
+1,a tray of sushi,test,test,test,test,test,test,test,test,test,test
+2,man lost in space,train,val,val,train,train,train,train,val,train,train
+3,a cosmic universe,test,test,test,test,test,test,test,test,test,test
+4,red and blue armor,train,train,train,train,train,train,train,val,train,train
+5,house of the dragon,val,train,train,train,train,train,train,train,train,train
+6,a river in a forest,test,test,test,test,test,test,test,test,test,test
+7,a cat doing karaoke,test,test,test,test,test,test,test,test,test,test
+8,joe biden very happy,train,train,train,train,train,train,train,train,train,train
+9,girl from fight club,train,train,train,val,train,train,train,train,train,train
+10,face shot of a woman,train,train,train,train,train,train,train,train,train,train
+11,the prince of the sun,train,train,train,train,train,train,train,train,train,train
+12,life bar and mana bar,train,train,train,train,train,train,train,train,train,train
+13,everything is a dream,train,train,val,train,train,train,train,train,train,train
+14,a small leopard gecko,test,test,test,test,test,test,test,test,test,test
+15,santa claus on drugs,train,train,val,train,train,train,train,train,train,train
+16,very sad rabbit crying,test,test,test,test,test,test,test,test,test,test
+17,tragedy of the commons,test,test,test,test,test,test,test,test,test,test
+18,man hating his printer,train,train,train,train,train,train,train,train,train,train
+19,big boss eating dinner,train,train,train,train,train,train,train,train,train,val
+20,a overgrown old house,train,train,train,train,train,train,train,train,train,train
+21,portrait of mecha robot,train,train,train,train,train,train,train,train,val,train
+22,panda chef in a kitchen,val,train,train,train,train,train,train,train,train,train
+23,king kong on fighting,train,train,train,train,train,val,val,train,train,train
+24,goddess of mystic unity,test,test,test,test,test,test,test,test,test,test
+25,a still of breaking bad,train,train,train,train,train,train,train,train,train,train
+26,a painting of a eclipse,train,val,train,train,train,train,train,train,train,train
+27,the large cresting waves,train,train,train,train,train,train,train,val,train,train
+28,maroon to black gradient,test,test,test,test,test,test,test,test,test,test
+29,legendary river of slugs,train,val,train,train,train,val,train,train,train,train
+30,brand logo fruit company,test,test,test,test,test,test,test,test,test,test
+31,black mickey mouse skull,train,train,train,val,train,train,train,train,train,train
+32,an emo portrait painting,train,train,train,train,train,train,train,train,train,train
+33,the pope had a rock band,train,train,train,train,train,train,train,train,train,train
+34,rat portrait as a warrior,train,train,train,train,train,val,train,train,val,train
+35,illustration of a rowboat,train,train,train,train,train,train,train,train,train,train
+36,gnome warfare at walmart,train,train,train,train,train,val,train,val,train,train
+37,demon queen with red eyes,train,train,train,val,train,train,train,train,val,train
+38,christmas at kelly family,train,train,train,val,train,train,train,train,train,train
+39,beautiful topaz girl dark,train,train,val,train,train,train,val,train,train,train
+40,an elaborate robot coding,train,train,train,train,train,train,train,train,train,val
+41,a raspberry made of metal,test,test,test,test,test,test,test,test,test,test
+42,a man jumping off a cliff,test,test,test,test,test,test,test,test,test,test
+43,a frog wearing police cap,train,train,train,train,train,val,train,train,train,train
+44,male warrior silver armor,train,train,train,train,train,train,train,train,train,train
+45,superman punches the pope,train,train,train,train,train,train,train,train,train,train
+46,the drowned and the saved,train,train,train,train,train,train,train,train,train,train
+47,stalin tapdancing on stage,train,train,train,val,train,train,train,train,train,train
+48,scottish highlands at dawn,train,train,train,train,train,train,train,train,train,train
+49,portrait of evil alchemist,train,train,train,train,train,train,train,train,train,train
+50,logo design of a full moon,train,train,train,train,train,train,train,train,train,train
+51,hanging gardens of babylon,test,test,test,test,test,test,test,test,test,test
+52,concept art of giant ogres,train,train,val,train,val,train,train,train,val,train
+53,castle from howl's sticker,test,test,test,test,test,test,test,test,test,test
+54,beautiful white fluffy cat,train,train,train,train,val,train,train,train,val,train
+55,a small ocean full of life,train,train,train,train,train,train,train,train,train,train
+56,survival in a winter forest,val,train,val,train,val,train,train,train,train,train
+57,sartre hugging a sad alien,train,train,val,train,train,train,train,train,train,train
+58,hairy man in eagle costume,train,train,train,train,train,train,train,train,train,train
+59,barak obama as master chief,train,train,train,train,train,train,train,train,train,train
+60,"artwork with only triangles, anime style",train,train,train,train,train,train,train,train,train,train
+61,"a yellow rendition of venom, sci-fi style",train,train,train,train,train,train,train,train,val,train
+62,"a colour portrait of a king, realistic style",val,train,train,train,val,train,train,train,train,train
+63,"overwatch small hut building, abstract style",train,train,train,train,train,train,train,train,train,train
+64,"monsters playing board games, baroque style",train,train,val,train,train,train,train,train,val,train
+65,"an environmental concept art, anime style",train,val,val,train,train,train,train,train,train,train
+66,"a pizza with chocolate on it, sci-fi style",train,val,train,train,train,train,train,val,train,train
+67,"a woman in newspaper clothes, realistic style",test,test,test,test,test,test,test,test,test,test
+68,"yog sothoth chef in a kitchen, abstract style",train,train,train,train,train,train,train,train,train,train
+69,"synthwave astronaut tabby cat, baroque style",train,train,train,train,train,train,train,train,train,train
+70,"space reflected in fox's eye , anime style",train,train,train,train,train,val,train,train,train,train
+71,"smart sri lanka buddhist monk, sci-fi style",test,test,test,test,test,test,test,test,test,test
+72,"painted portrait of snake man, realistic style",train,train,train,train,train,train,train,train,val,train
+73,"otter making a disgusted face, abstract style",val,train,train,train,train,train,train,train,val,train
+74,"legionary of the roman empire, baroque style",train,train,train,val,val,train,val,val,train,val
+75,"concept art of octopus attack, anime style",test,test,test,test,test,test,test,test,test,test
+76,"a biomechanical dahlia flower, sci-fi style",train,train,train,train,train,train,train,val,train,train
+77,"a anthropomorphic cat warrior, realistic style",train,train,train,train,train,train,train,train,train,train
+78,"tree of life embroidered scene, abstract style",train,train,train,train,val,train,train,train,train,train
+79,"the infernal dark gun magicks , baroque style",train,val,train,train,train,train,train,train,train,train
+80,"painted portrait of goblin man, anime style",train,train,val,train,train,train,train,val,train,train
+81,"large purple lovecraftian void, sci-fi style",train,val,train,val,train,train,train,train,train,train
+82,"lanky young half - orc warrior, realistic style",train,train,train,train,train,train,val,train,train,val
+83,"eiffel tower drenched in blood, abstract style",train,train,train,train,train,train,train,train,train,train
+84,"sheep that looks like broccoli, baroque style",train,train,train,train,train,train,train,train,train,train
+85,"grumpy minions sitting in a bar, anime style",train,train,val,train,train,train,train,train,train,train
+86,"a very drunk person named aaron, sci-fi style",train,train,train,train,train,train,train,train,val,train
+87,"a tonalism portrait of a ghost , realistic style",test,test,test,test,test,test,test,test,test,test
+88,"a space shuttle flying in space, abstract style",val,train,train,train,train,train,train,train,train,train
+89,"a crocodile in a new york sewer, baroque style",test,test,test,test,test,test,test,test,test,test
+90,"little girl with a mushroom hat, anime style",train,train,train,val,train,train,train,train,train,train
+91,"ufo ignoring the laws of phyics, sci-fi style",train,train,train,train,train,train,train,train,train,train
+92,"steampunk walter white portrait , realistic style",train,train,train,train,train,val,train,train,train,train
+93,"photo of tony danza eating chili, abstract style",train,val,train,train,train,train,train,train,train,train
+94,"painted portrait of fierce elder, baroque style",train,train,train,train,train,train,train,train,train,val
+95,"moon sea with stars and galaxies, anime style",train,train,train,train,train,train,train,val,train,val
+96,"meme about making peanut butter , sci-fi style",train,train,train,train,val,train,train,train,train,train
+97,"donald trump playing in the rain, realistic style",train,train,train,train,train,train,train,train,val,val
+98,"cute fox in suit dancing in club, abstract style",val,train,train,train,train,train,train,train,train,train
+99,"brain floating out of a portrait, baroque style",val,val,train,train,val,val,train,train,train,train
+100,"a small garden buzzing with bees, anime style",val,train,train,train,train,train,train,train,train,train
+101,"a man playing an invisible cello, sci-fi style",train,val,train,train,train,train,train,train,train,train
+102,"a grand stag in a fantasy forest, realistic style",train,val,train,train,train,train,train,train,train,train
+103,"a giant rock floating in the air, abstract style",train,train,train,val,val,train,train,train,train,train
+104,"a biomechanical cybertronic frog, baroque style",test,test,test,test,test,test,test,test,test,test
+105,"a 2 d guitarist character design, anime style",val,train,train,train,train,train,val,train,train,train
+106,"vaporware yosemite amusement park, sci-fi style",train,train,train,train,train,train,train,train,val,train
+107,"spritesheet game asset vector art, realistic style",train,train,train,train,train,train,val,train,train,train
+108,"portrait of a dancing eagle woman, abstract style",test,test,test,test,test,test,test,test,test,test
+109,"photograph of beautiful landscape, baroque style",val,val,train,train,train,train,train,train,train,train
+110,"painted portrait of intense woman, anime style",test,test,test,test,test,test,test,test,test,test
+111,"grand canyon full of potato salad, sci-fi style",train,val,train,train,train,train,train,train,train,train
+112,"gorgeous young scandanavian woman, realistic style",train,train,train,val,train,train,train,train,train,train
+113,"epic colourful scene from a dream, abstract style",test,test,test,test,test,test,test,test,test,test
+114,"donut glazed with white chocolate, baroque style",val,val,train,train,train,train,train,train,train,train
+115,"ocean of canvas that catches fire, anime style",train,train,train,train,train,train,train,train,train,train
+116,"portrait of beautiful armored girl, sci-fi style",train,val,train,train,train,train,train,train,train,train
+117,"portrait of a cloaked female devil, realistic style",train,train,train,train,val,train,train,val,train,train
+118,"foxes judging a cheese competition, abstract style",test,test,test,test,test,test,test,test,test,test
+119,"female demon in a medieval dungeon, baroque style",train,train,train,train,train,train,train,train,train,train
+120,"die cut sticker of a pair of lips , warm color",train,train,train,train,train,train,train,train,train,train
+121,"cute green tabby cat made of leaves, cold color",train,train,train,train,train,val,val,train,train,train
+122,"chinese demon god character design, top view",train,train,train,train,train,train,train,train,train,train
+123,"anthropomorphic pine marten animal, elevation view",train,train,train,train,val,train,train,val,train,train
+124,"action shot of woman pole vaulting, close-up",train,train,train,train,train,train,val,train,train,train
+125,"a upright walking cute giraffe toy, long-shot",train,val,train,train,train,train,train,train,train,train
+126,"the shogoth wearing a santa costume, blurred detail",train,train,train,train,val,train,train,train,train,train
+127,"robots building robots in a factory, hyper detail",test,test,test,test,test,test,test,test,test,test
+128,"portrait of a tang dynasty empress , soft lighting",train,train,train,train,train,train,train,train,train,train
+129,"portrait of a beautiful young woman, HDR lighting",test,test,test,test,test,test,test,test,test,test
+130,"photography of a happy blonde girl , warm color",train,train,train,train,train,val,train,train,train,train
+131,"cute fluffy baby panda lion hybrid , cold color",train,train,val,train,train,train,train,train,train,train
+132,"a girl with rainbow in white shirt , top view",train,train,train,train,train,train,train,train,train,train
+133,"a blue abyss underwater concept art, elevation view",train,train,train,train,train,train,train,train,train,train
+134,"a biomechanical orchid heart fusion, close-up",train,train,train,val,train,train,train,train,val,train
+135,"a set of different trees and bushes, long-shot",val,train,train,train,train,val,train,train,train,val
+136,"man in his late 40 s wearing a suit, blurred detail",train,train,val,train,train,train,train,val,val,train
+137,"white fur furry mothman movie scene , hyper detail",train,train,train,val,val,val,train,train,train,train
+138,"render of dreamy beautiful landscape, soft lighting",train,train,train,train,train,train,train,train,train,train
+139,"digital painting of a lake at sunset, HDR lighting",train,train,val,train,train,train,train,train,train,train
+140,"cute great old ones sitting in a bar, warm color",train,train,train,train,train,train,train,train,val,train
+141,"a portrait of girl bard in red dress, cold color",train,train,train,train,val,train,train,val,train,val
+142,"a biomechanical passion fruit flower, top view",val,train,train,train,train,train,train,train,train,train
+143,"portrait of squids swarming the ocean, elevation view",train,train,train,train,train,train,train,train,train,val
+144,"pendant of a silver starfish necklace, close-up",train,val,train,train,train,train,train,val,train,train
+145,"kraken is using large sponge for bath, long-shot",train,train,val,train,train,train,train,train,train,val
+146,"cute fluffy lion cheetah hybrid mixed, blurred detail",train,train,val,train,train,train,train,train,val,train
+147,"bill gates and jason statham fight m , hyper detail",train,train,train,train,train,val,val,train,train,val
+148,"a portrait painting of a buck in suit, soft lighting",train,train,train,val,val,train,train,train,train,train
+149,"a plasticine model of a goblin raider, HDR lighting",train,train,train,train,val,train,val,val,train,train
+150,"portrait of ciri as a samurai assassin, warm color",train,train,train,train,train,train,train,train,train,train
+151,"photo of a white fashion jewelry store, cold color",train,train,train,train,train,train,train,train,train,train
+152,"grumpy the elder gods sitting in a bar, top view",val,train,train,train,train,train,train,val,train,train
+153,"grumpy king in yellow sitting in a bar, elevation view",train,train,train,train,train,train,train,train,val,train
+154,"cute fluffy baby poodle giraffe hybrid, close-up",test,test,test,test,test,test,test,test,test,test
+155,"an auto rickshaw driving through paris, long-shot",val,train,train,train,train,train,train,train,train,train
+156,"an adventure party resting in a tavern, blurred detail",train,train,val,train,val,train,train,val,train,train
+157,"spaceship flying over a strange planet, hyper detail",test,test,test,test,test,test,test,test,test,test
+158,"photograph of a stone cairn in scotland, soft lighting",val,train,train,train,train,train,val,train,train,train
+159,"person walking inside a timeless bubble, HDR lighting",test,test,test,test,test,test,test,test,test,test
+160,"cute soul ghost in infinity mirror room, warm color",train,train,train,train,train,train,val,train,train,train
+161,"cute fluffy baby lop eared bunny rabbit, cold color",train,train,train,train,val,train,val,train,train,train
+162,"an industrial geometric temple lab room, top view",train,train,train,val,train,train,train,train,train,train
+163,"a portrait of girl boxer in a red dress, elevation view",train,train,train,train,train,train,train,train,train,train
+164,"a pig sitting in a chair smoking a pipe, close-up",val,train,train,train,val,train,train,train,train,train
+165,"a female hand holding a red fresh apple, long-shot",train,train,train,train,train,train,train,train,train,train
+166,"a cybertronic metallic green tree frog , blurred detail",train,train,train,val,train,train,train,train,train,train
+167,"two women working in a recording studio, hyper detail",train,train,train,train,train,train,train,train,train,train
+168,"the celestial realm of the elven deities, soft lighting",train,train,train,train,val,val,train,train,train,val
+169,"profile face portrait of a tin toy robot, HDR lighting",train,train,val,train,train,train,train,train,train,val
+170,"portrait of butterflies swarming flowers, warm color",test,test,test,test,test,test,test,test,test,test
+171,"grumpy disney princess sitting in a cave, cold color",test,test,test,test,test,test,test,test,test,test
+172,"art of a mimic from dungeons and dragons, top view",val,train,train,train,train,train,train,train,train,train
+173,"ancient japanese fantasy garden at night, elevation view",train,train,train,train,train,train,train,train,val,train
+174,"ancient golden chrome finish skateboard , close-up",train,train,train,train,train,train,train,train,train,val
+175,"a portrait of the mri brain damage demon, long-shot",train,train,train,val,train,train,train,train,train,train
+176,"a painting of pink panther as a vampire , blurred detail",train,train,val,train,train,train,train,train,train,train
+177,"a huge wooden carving sculpture of a fox, hyper detail",train,train,train,train,train,val,train,train,train,val
+178,"a car crawling with human hands and feet, soft lighting",train,train,train,val,train,train,train,train,train,train
+179,"underwater photography of the rough ocean, HDR lighting",train,train,val,train,train,train,val,val,train,train
+180,"muscular cyborg girl with prosthetic arms, warm color, anime style",val,train,train,train,train,train,train,train,train,train
+181,"an underwater photo of coral in the ocean, cold color, sci-fi style",train,train,train,train,train,train,train,train,val,train
+182,"a female warrior in charming phenix armor, top view, realistic style",train,train,train,train,train,train,val,val,val,train
+183,"radioactive alien mushrooms in the forest , elevation view, abstract style",train,train,train,train,train,train,train,train,train,train
+184,"professional studio logo for robot artists, close-up, baroque style",train,train,train,train,train,train,train,val,train,train
+185,"die cut sticker of chibi cute golf player , long-shot, anime style",train,train,train,val,train,val,train,train,val,train
+186,"a portrait of girl alchemist in blue dress, blurred detail, sci-fi style",train,val,train,train,train,train,train,train,train,train
+187,"softboy aesthetic in ancient greek clothing, hyper detail, realistic style",train,train,train,train,train,train,train,train,train,train
+188,"portrait painting of a west hightland white, soft lighting, abstract style",train,train,train,train,train,train,train,train,train,train
+189,"lobster human hybrid in fashion photography, HDR lighting, baroque style",train,train,train,train,train,train,train,train,train,train
+190,"delicious peanut butter donut with glazing , warm color, anime style",test,test,test,test,test,test,test,test,test,test
+191,"cute fluffy golden teddy bear eating bagels, cold color, sci-fi style",test,test,test,test,test,test,test,test,test,test
+192,"beautiful ancient temple in a formal garden, top view, realistic style",train,train,train,train,train,train,train,train,train,train
+193,"a portrait of a female robot made from code, elevation view, abstract style",test,test,test,test,test,test,test,test,test,test
+194,"a cyborg jellyfish swimming in a vast ocean, close-up, baroque style",train,train,train,train,train,train,train,train,train,train
+195,"unique epic pink space elf knight adventurer, long-shot, anime style",train,train,train,train,train,train,train,train,train,train
+196,"the essence of the chemical element hydrogen, blurred detail, sci-fi style",train,train,train,train,train,train,val,train,train,train
+197,"storm troopers cosplaying the power rangers , hyper detail, realistic style",train,train,train,train,train,val,train,train,train,train
+198,"robots creating new robots in a factory line, soft lighting, abstract style",train,train,train,val,train,train,val,train,train,train
+199,"full body portrait of cute girl wearing gown, HDR lighting, baroque style",train,val,train,val,train,train,train,train,train,train
+200,"alien planet landscape made out of mushrooms, warm color, anime style",test,test,test,test,test,test,test,test,test,test
+201,"a gummy bear performing at woodstock concert, cold color, sci-fi style",test,test,test,test,test,test,test,test,test,test
+202,"a biomechanical blue raspberry made of metal, top view, realistic style",val,train,val,train,train,train,train,train,val,train
+203,"a beautiful brutalist concrete forest temple, elevation view, abstract style",test,test,test,test,test,test,test,test,test,test
+204,"2 friends partying and are facing the camera, close-up, baroque style",train,train,train,train,train,val,train,train,train,train
+205,"the fate of all fools and divine intervention, long-shot, anime style",train,train,train,train,train,train,train,train,val,train
+206,"robots creating new robots in a dirty factory, blurred detail, sci-fi style",train,train,train,train,train,train,train,train,train,val
+207,"painting of a man farmer at work in the field, hyper detail, realistic style",test,test,test,test,test,test,test,test,test,test
+208,"french fastfood adventure pixar movie poster , soft lighting, abstract style",val,val,train,train,train,train,train,train,train,val
+209,"an uprising of disneyland costumed characters, HDR lighting, baroque style",val,train,train,train,train,val,train,train,train,train
+210,"an astronaut meeting an alien lizard humanoid, warm color, anime style",val,train,val,train,train,train,train,train,train,train
+211,"a woman in a trench coat looking out a window, cold color, sci-fi style",test,test,test,test,test,test,test,test,test,test
+212,"a glass vase of pink and white dahlia flowers, top view, realistic style",train,train,train,train,train,train,train,train,train,train
+213,"a biomechanical hibiscus flower made of metal, elevation view, abstract style",train,train,train,train,train,train,train,train,train,val
+214,"render of rivendell dreamy beautiful landscape, close-up, baroque style",train,train,val,train,train,val,train,val,train,val
+215,"portrait with no signature of aggressive alien, long-shot, anime style",train,val,train,train,train,train,train,train,train,train
+216,"elegant oval mirror and toucan with reflection, blurred detail, sci-fi style",train,train,train,train,val,train,train,train,train,train
+217,"a portrait photo of a beautiful female android, hyper detail, realistic style",test,test,test,test,test,test,test,test,test,test
+218,"a masonic illuminati waiting room with a couch, soft lighting, abstract style",train,train,train,train,val,train,train,train,train,train
+219,"a brand logo of henry cavill as a catholic nun, HDR lighting, baroque style",train,train,train,val,train,train,train,train,train,train
+220,"sparkling heart blue mana tree inside a marble, warm color, top view",val,train,train,val,train,train,train,val,train,train
+221,"goose being zipped - up by man in orange shirt, warm color, elevation view",test,test,test,test,test,test,test,test,test,test
+222,"interior of cosmic highway created by the gods, cold color, top view",train,train,train,train,train,train,train,train,train,train
+223,"small group of nomads staying at ancient ruins, cold color, elevation view",val,train,val,train,train,train,val,train,train,train
+224,"lovers being pulled apart across space and time, warm color, close-up",train,train,train,train,train,train,val,train,train,train
+225,"atomic cloud fire explosion inside a snow globe, warm color, long-shot",train,val,train,val,train,val,train,train,train,train
+226,"an anatomically correct cybertronic human heart, cold color, close-up",test,test,test,test,test,test,test,test,test,test
+227,"a sketch drawing of a hamster in a fruit basket, cold color, long-shot",val,val,val,train,train,train,train,val,val,train
+228,"a kitten with two little goat horns on his head, warm color, blurred detail",train,train,train,train,train,train,train,train,train,train
+229,"a heavily bloodied horrified pretty young woman, warm color, hyper detail",train,train,train,train,val,train,train,train,train,train
+230,"a fantast beauty detailed elf with mermaid tail, cold color, blurred detail",test,test,test,test,test,test,test,test,test,test
+231,"a dramatic photo of a lion made of cotton candy, cold color, hyper detail",test,test,test,test,test,test,test,test,test,test
+232,"steampunk owl inside a glass jar buried in sand, warm color, soft lighting",train,train,val,train,train,val,train,train,val,train
+233,"a penguin slipping on a banana in the antarctic , warm color, HDR lighting",train,train,train,train,train,train,val,train,train,train
+234,"a mechanical human arm sticking out of the earth, cold color, soft lighting",train,train,train,train,train,train,train,train,train,train
+235,"steampunk squid inside a glass jar buried in sand, cold color, HDR lighting",test,test,test,test,test,test,test,test,test,test
+236,"short - haired short butch tomboy blonde engineer, top view, close-up",train,val,val,train,train,train,train,train,train,train
+237,"portrait of terrified green ball gown young woman, top view, long-shot",val,train,train,train,train,train,val,val,train,train
+238,"many bodies floating in an infinite lake of blood, elevation view, close-up",test,test,test,test,test,test,test,test,test,test
+239,"a small grassland nestled in the hollow of a tree, elevation view, long-shot",val,train,train,train,train,train,train,train,train,train
+240,"photoreal portrait of a futuristic intricate robot, top view, blurred detail",test,test,test,test,test,test,test,test,test,test
+241,"breaking moon as seen from the surface of the moon, top view, hyper detail",train,train,train,train,train,train,train,train,train,val
+242,"a living room with a black and white chevron floor, elevation view, blurred detail",train,train,train,train,train,train,train,train,train,train
+243,"mushrooms and moss on a tree in a fairytale forest, elevation view, hyper detail",train,val,val,train,train,train,train,train,train,val
+244,"man at a royal banquet wearing an asymmetrical gown, top view, soft lighting",train,train,train,train,train,val,train,train,val,train
+245,"fullbody portrait of half - fox woman with fox ears, top view, HDR lighting",train,train,train,train,train,train,train,train,train,train
+246,"alphonse eric from full metal alchemist brotherhood, elevation view, soft lighting",train,train,train,train,train,train,train,train,train,train
+247,"a saint noble high priestess pray for god in church, elevation view, HDR lighting",train,train,train,train,train,train,train,train,train,train
+248,"a redhair beautiful girl wearing brown olive dress, close-up, blurred detail",train,train,train,train,train,train,train,val,train,train
+249,"a female elven warrior wearing platinum breastplate, close-up, hyper detail",train,train,train,train,train,val,train,train,train,val
+250,"a dramatic photo of a mountain made of layered cake, long-shot, blurred detail",train,train,train,train,train,train,train,train,train,train
+251,"a brain with eyeballs peaking out between the folds, long-shot, hyper detail",test,test,test,test,test,test,test,test,test,test
+252,"a bokeh photo of a zombie gardener admiring flowers, close-up, soft lighting",train,train,train,train,val,val,train,train,train,train
+253,"a biomechanical cyborg torso abandoned in a factory, close-up, HDR lighting",train,train,train,val,train,train,val,val,train,train
+254,"portrait of beautiful woman with magical nebula hair, long-shot, soft lighting",train,train,train,train,train,val,train,train,train,train
+255,"magician god holding a divine staff character design, long-shot, HDR lighting",train,train,train,val,train,train,train,train,train,train
+256,"full length portrait of a beautiful woman with horns, blurred detail, soft lighting",train,train,train,train,train,val,train,train,train,train
+257,"dragons flyring around a snowcapped fantasy mountain, blurred detail, HDR lighting",train,train,train,train,val,train,train,train,train,train
+258,"black broken armor and helmet laying in wild flowers, hyper detail, soft lighting",test,test,test,test,test,test,test,test,test,test
+259,"a parade of disconnected images : a tragic supernova, hyper detail, HDR lighting",train,train,train,train,train,train,val,train,train,train
+260,"mickey mouse head automaton held by a mechanical claw, warm color, top view, anime style",train,val,train,train,train,train,train,train,train,val
+261,"epic vessel cage armor of interdimensional adventurer, warm color, elevation view, sci-fi style",train,train,train,train,train,val,val,train,train,train
+262,"edwardian headshot photograph of a pale russian woman, cold color, top view, realistic style",test,test,test,test,test,test,test,test,test,test
+263,"cute animal character sleeping in the space station, cold color, elevation view, abstract style",train,train,train,train,train,train,train,train,train,train
+264,"a hyper intricate oil portrait red cathedral interior, warm color, close-up, baroque style",train,train,train,val,train,train,val,train,train,train
+265,"a blue anatomically correct human brain made of metal, warm color, long-shot, anime style",test,test,test,test,test,test,test,test,test,test
+266,"scottish stone cairn inside a glass jar buried in sand, cold color, close-up, sci-fi style",train,train,train,val,train,train,train,val,val,train
+267,"beautiful viking woman surrounded by treasure and gold, cold color, long-shot, realistic style",train,train,train,train,train,train,train,train,train,train
+268,"spaceport on a vast desert planet with ships taking off, warm color, blurred detail, abstract style",val,train,train,train,train,train,val,val,val,train
+269,"poignant portrait of an older man remembering his youth, warm color, hyper detail, baroque style",train,train,train,train,val,train,train,train,train,train
+270,"european woodcut of a wooden sailing vessel on a stormy, cold color, blurred detail, anime style",test,test,test,test,test,test,test,test,test,test
+271,"the gold skull coming out from open cracked marble head, cold color, hyper detail, sci-fi style",train,train,val,train,val,train,train,train,train,train
+272,"frontal portrait of female adult twins in the apocalypse, warm color, soft lighting, realistic style",train,train,train,train,train,train,train,train,train,train
+273,"exploring an epic organic and colourful underground city, warm color, HDR lighting, abstract style",train,train,train,train,train,train,train,train,train,train
+274,"angled photograph of an abandoned train cart during dusk, cold color, soft lighting, baroque style",train,train,train,train,train,train,train,train,train,val
+275,"a vibrant emotional key shot of cute australian shepherd, cold color, HDR lighting, anime style",test,test,test,test,test,test,test,test,test,test
+276,"portrait photo still of a spooky scarecrow holding a gift, top view, close-up, sci-fi style",train,val,train,val,train,train,train,train,train,train
+277,"plasticine sculptures of two lovers walking through paris, top view, long-shot, realistic style",train,train,train,val,val,train,val,val,train,val
+278,"dark grey skinned female goblin with an oversized red axe, elevation view, close-up, abstract style",train,train,train,train,train,train,train,train,train,train
+279,"table with everything ready for 5 o'clock at flower garden, elevation view, long-shot, baroque style",train,train,train,train,val,train,train,train,train,train
+280,"rats in tuxedos drinking champagne in bubbles in the space, top view, blurred detail, anime style",train,train,train,val,train,train,val,train,train,train
+281,"portrait of a philippine character in a scenic environment, top view, hyper detail, sci-fi style",test,test,test,test,test,test,test,test,test,test
+282,"strange mythical plankton near a waterfall trying to escape, elevation view, blurred detail, realistic style",train,train,train,train,train,train,train,train,train,train
+283,"steampunk pocketwatch owl inside a glass jar buried in sand, elevation view, hyper detail, abstract style",test,test,test,test,test,test,test,test,test,test
+284,"portrait of beautiful female supermodel wearing olive dress, top view, soft lighting, baroque style",train,train,train,train,train,train,train,train,train,val
+285,"portrait of an aesthetic kawaii goth woman with long dreads, top view, HDR lighting, anime style",train,train,train,train,train,val,train,train,train,train
+286,"an epic artistic colourful natural scene on an alien planet, elevation view, soft lighting, sci-fi style",test,test,test,test,test,test,test,test,test,test
+287,"cute anthropomorphic lizard person portrait symmetrical axis, elevation view, HDR lighting, realistic style",train,train,train,train,train,train,val,train,train,train
+288,"a beautiful painting of old golden samovars of russian empire, close-up, blurred detail, abstract style",train,train,train,train,train,train,train,train,val,val
+289,"portrait photo of a scientist deformed by some unknown disease, close-up, hyper detail, baroque style",test,test,test,test,test,test,test,test,test,test
+290,"a portrait of girl chronomancer glass jewelry padlocks fantasy, long-shot, blurred detail, anime style",test,test,test,test,test,test,test,test,test,test
+291,"oil painting portrait of anthropomorphic female green fox animal, long-shot, hyper detail, sci-fi style",train,train,train,train,train,train,val,train,train,train
+292,"a translucent bioluminescent ctenophore floating deep in the sea, close-up, soft lighting, realistic style",test,test,test,test,test,test,test,test,test,test
+293,"futuristic robot alien invasion award winning pixar movie poster , close-up, HDR lighting, abstract style",test,test,test,test,test,test,test,test,test,test
+294,"anthropomorphic thresher shark in knight armor dropping his sword, long-shot, soft lighting, baroque style",train,val,train,train,train,train,train,train,val,train
+295,"depressed people standing around an hourglass with little sand left, long-shot, HDR lighting, anime style",train,val,train,train,train,train,train,val,train,train
+296,"bloodborne werewolf howling in yharnam with full moon in background, blurred detail, soft lighting, sci-fi style",train,train,train,train,train,train,train,train,train,train
+297,"cute fluffy baby cheetah lion hybrid mixed creature character concept, blurred detail, HDR lighting, realistic style",train,train,train,train,train,train,train,train,train,val
+298,"photoreal portrait very intricate darkwar hunter wearing a black hoody, hyper detail, soft lighting, abstract style",train,val,val,train,train,train,train,train,train,train
+299,"beautiful fluffy baby giraffe cheetah hybrid mixed creature character concept, hyper detail, HDR lighting, baroque style",train,train,train,train,train,val,train,train,train,val

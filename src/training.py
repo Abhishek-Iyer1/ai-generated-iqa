@@ -2,6 +2,7 @@ import os
 import torch
 import pickle
 import pandas as pd
+import numpy as np
 import torch.nn as nn
 import torch.optim as optim
 
@@ -28,7 +29,7 @@ def run_training_pipeline():
     # Load dataframe, prepend image prefixs and generate dataset
     data_df = pd.read_csv(data_path)
     data_df["full_paths"] = data_df["name"].apply(lambda x: os.path.join(image_prefix, x))
-    agiqa = AGIQA(data_df)
+    # agiqa = AGIQA(data_df)
 
     # Load split files from K folds or Run if file not present
     with open('../data/k_fold_splits.pkl', 'rb') as f:
@@ -88,6 +89,7 @@ def run_training_pipeline():
 
             #Initialize valid loss
             valid_epoch_loss = 0
+
             # Set model to eval mode
             my_resnet.eval()
 
@@ -131,6 +133,130 @@ def run_training_pipeline():
 
     # Close writer
     writer.close()
+
+def run_alternative_split_pipeline():
+
+    # Create SummaryWriter instance that will log to ./runs/ by default
+    writer = SummaryWriter()
+
+    # Set device to be used
+    device = 'cpu'
+
+    # Set paths for dataset and image prefixs
+    data_path = "../data/AGIQA-3k/AGIQA-3k/data.csv"
+    image_prefix = "../data/AGIQA-3k/AGIQA-3k/Images/"
+    split_path = "../data/CDS_0.csv"
+
+    data_df = pd.read_csv(data_path)
+    data_df["full_paths"] = data_df["name"].apply(lambda x: os.path.join(image_prefix, x))
+    discard_models_condition = ((data_df["name"].str.startswith("AttnGAN")) | (data_df["name"].str.startswith("glide")))
+
+    filtered_df = data_df[(np.bitwise_not(discard_models_condition))]
+
+    split_df = pd.read_csv(split_path)
     
+    train_prompts = split_df.query("split_0 == 'train'")["prompt"] 
+    val_prompts = split_df.query("split_0 == 'val'")["prompt"] 
+    test_prompts =  split_df.query("split_0 == 'test'")["prompt"]
+
+    train_df = filtered_df[filtered_df["prompt"].isin(train_prompts)]
+    val_df = filtered_df[filtered_df["prompt"].isin(val_prompts)]
+    test_df = filtered_df[filtered_df["prompt"].isin(test_prompts)]
+
+    # Load the model in order to reset its weights
+    my_resnet = load_model().to(device)
+
+    # Create Sub Datasets from indices
+    training_dataset = AGIQA(train_df)
+    val_dataset = AGIQA(val_df)
+    test_dataset = AGIQA(test_df)
+
+    # Create DataLoaders to take advantage of batching, multiprocessing, and shuffling
+    fold = "Fold 1"
+    batch_size = 32
+    training_dataloader = DataLoader(training_dataset, batch_size=batch_size, shuffle=True)
+    val_dataloader = DataLoader(val_dataset, batch_size=batch_size, shuffle=True)
+    test_dataloader = DataLoader(test_dataset, batch_size=batch_size, shuffle=True)
+
+    # Run a simple training loop where weights are set to 0, both losses updated, weights updated. (Per Epoch)
+    epochs = 5
+    loss_fn = nn.MSELoss()
+    optimizer = optim.SGD(my_resnet.parameters(), lr=0.001, momentum=0.9)
+    my_resnet.train()
+
+    for epoch in range(0, epochs):
+
+        train_epoch_loss = 0
+
+        # Run training loop for one epoch
+        for x_batch, y_batch in tqdm(training_dataloader):
+
+            x_batch = x_batch.float().to(device)
+            y_batch = y_batch.reshape([y_batch.size()[0],1]).float().to(device)
+
+            optimizer.zero_grad()
+            y_pred = my_resnet(x_batch)
+            loss = loss_fn.forward(y_pred, y_batch)
+            loss.backward()
+            optimizer.step()
+
+            train_epoch_loss += loss.item()
+            
+        writer.add_scalar(f"Alt_split/{fold}/Loss/train", train_epoch_loss, epoch+1)
+
+        print(f"Train Loss Epoch {epoch+1}: {train_epoch_loss}")
+
+        #Initialize valid loss
+        valid_epoch_loss = 0
+
+        # Set model to eval mode
+        my_resnet.eval()
+
+        val_srocc = 0
+
+        for val_x, val_y in tqdm(val_dataloader):
+            val_x = val_x.float().to(device)
+            val_y = val_y.float().to(device)
+
+            y_pred = my_resnet.forward(val_x)
+
+            val_batch_loss = loss_fn.forward(y_pred, val_y)
+
+            valid_epoch_loss += val_batch_loss
+
+            val_srocc += stats.spearmanr(y_pred.detach().cpu(), val_y.detach().cpu()).statistic
+            # print(srocc)
+
+        writer.add_scalar(f"Alt_split/{fold}/Loss/valid", valid_epoch_loss, epoch+1)
+        writer.add_scalar(f"Alt_split/{fold}/Acc/val_srocc", ((val_srocc * batch_size) / len(val_dataset)), epoch+1)
+
+        print(f"Valid Loss Epoch {epoch+1}: {valid_epoch_loss}, Val SROCC Accuracy Average: {(srocc * batch_size) / len(test_dataset)}")
+
+        test_epoch_loss = 0
+        srocc = 0
+        for x_test, y_test in tqdm(test_dataloader):
+            x_test: torch.Tensor = x_test.to(device)
+            y_test: torch.Tensor = y_test.reshape([y_test.size()[0],1]).to(device)
+            y_pred = my_resnet.forward(x_test)
+            loss = loss_fn.forward(y_pred, y_test)
+            test_epoch_loss += loss
+            srocc += stats.spearmanr(y_pred.detach().cpu(), y_test.detach().cpu()).statistic
+        
+        writer.add_scalar(f"Alt_split/{fold}/Loss/test", test_epoch_loss, epoch+1)
+        writer.add_scalar(f"Alt_split/{fold}/Acc/srocc", ((srocc * batch_size) / len(test_dataset)), epoch+1)
+
+        print(f"Test Loss: {test_epoch_loss}, SROCC Accuracy Average: {(srocc * batch_size) / len(test_dataset)}")
+
+    # Save Model and Weights
+    torch.save(my_resnet.state_dict(), f'model/alt_split_my_resnet_{fold}.pth')
+
+    # Flush the tensorboard information to save it to disk
+    writer.flush()
+
+    # Close writer
+    writer.close()
+
+
 if __name__ == "__main__":
-    run_training_pipeline()
+    # run_training_pipeline()
+    run_alternative_split_pipeline()
