@@ -140,7 +140,7 @@ def run_alternative_split_pipeline():
     writer = SummaryWriter()
 
     # Set device to be used
-    device = 'cpu'
+    device = 'cuda'
 
     # Set paths for dataset and image prefixs
     data_path = "../data/AGIQA-3k/AGIQA-3k/data.csv"
@@ -230,7 +230,7 @@ def run_alternative_split_pipeline():
         writer.add_scalar(f"Alt_split/{fold}/Loss/valid", valid_epoch_loss, epoch+1)
         writer.add_scalar(f"Alt_split/{fold}/Acc/val_srocc", ((val_srocc * batch_size) / len(val_dataset)), epoch+1)
 
-        print(f"Valid Loss Epoch {epoch+1}: {valid_epoch_loss}, Val SROCC Accuracy Average: {(srocc * batch_size) / len(test_dataset)}")
+        print(f"Valid Loss Epoch {epoch+1}: {valid_epoch_loss}, Val SROCC Accuracy Average: {(val_srocc * batch_size) / len(val_dataset)}")
 
         test_epoch_loss = 0
         srocc = 0
