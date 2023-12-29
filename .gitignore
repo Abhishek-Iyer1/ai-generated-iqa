@@ -1,2 +1,4 @@
 data/AGIQA-3k
 data/AIGCIQA2023
+modules/
+__pycache__/
